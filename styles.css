@@ -324,13 +324,45 @@ section h2::after {
 }
 
 /* EXPECT */
+.expect {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.expect::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background-image: url("assets/backdrop.jpg");
+  background-size: cover;
+  background-position: center;
+  transform: scaleX(-1);
+}
+
+.expect::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(180deg, var(--navy-deep) 0%, rgba(6, 11, 34, 0.55) 12%, rgba(6, 11, 34, 0.55) 88%, var(--navy-deep) 100%);
+  pointer-events: none;
+}
+
 .expect .lede {
   text-align: center;
   max-width: 720px;
   margin: 0 auto 2.5rem;
   font-size: 1.1rem;
-  color: var(--text-muted);
+  color: #fff;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.6);
 }
+
+.expect .lede strong { color: var(--gold); }
+
+.expect h2 { text-shadow: 0 2px 18px rgba(0, 0, 0, 0.6); }
 
 .expect-list {
   list-style: none;
@@ -344,12 +376,14 @@ section h2::after {
 }
 
 .expect-list li {
-  background: var(--card);
+  background: rgba(11, 20, 55, 0.65);
   border: 1px solid var(--card-border);
   border-radius: var(--radius);
   padding: 1.25rem;
   text-align: center;
   font-weight: 600;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .expect-list span {
