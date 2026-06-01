@@ -10,8 +10,8 @@
   <meta property="og:type" content="website" />
   <meta property="og:image" content="assets/og-image.jpg" />
   <meta name="theme-color" content="#0b1437" />
-  <link rel="preload" as="image" href="assets/logo.png" fetchpriority="high" />
-  <link rel="preload" as="image" href="assets/backdrop.jpg" />
+  <link rel="preload" as="image" href="assets/logo.webp" imagesrcset="assets/logo.webp" type="image/webp" fetchpriority="high" />
+  <link rel="preload" as="image" href="assets/backdrop.webp" type="image/webp" />
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='80' font-size='80'%3E%E2%9C%A8%3C/text%3E%3C/svg%3E" />
 </head>
@@ -22,15 +22,17 @@
     <div class="hero-bg" aria-hidden="true"></div>
     <div class="container">
       <p class="eyebrow"><span class="eyebrow-dot"></span>Surrendered Church &middot; El Paso, TX</p>
-      <p class="kicker">Kids Bible Camp <span class="year">2026</span></p>
-      <h1 class="visually-hidden">Illumination Station — Shining a light on who Jesus really is — John 8:12</h1>
-      <img
-        class="hero-logo"
-        src="assets/logo.png"
-        alt="Illumination Station — Shining a light on who Jesus really is — John 8:12"
-        width="1400"
-        height="900"
-        fetchpriority="high" />
+      <h1 class="kicker">Kids Bible Camp <span class="year">2026</span></h1>
+      <picture>
+        <source srcset="assets/logo.webp" type="image/webp" />
+        <img
+          class="hero-logo"
+          src="assets/logo.png"
+          alt="Illumination Station — Shining a light on who Jesus really is — John 8:12"
+          width="1400"
+          height="882"
+          fetchpriority="high" />
+      </picture>
       <a class="cta" href="https://tithe.ly/event-registration/#/11221338" target="_blank" rel="noopener">
         Register Your Child &rarr;
       </a>
@@ -73,7 +75,7 @@
             <div class="icon" aria-hidden="true">&#127919;</div>
             <h3>Cost</h3>
             <p class="big">$10<span class="per">/child</span></p>
-            <p>Includes snacks, supplies, music, and a camp T-shirt while supplies last.</p>
+            <p>Includes dinner, supplies, music, and a camp T-shirt while supplies last.</p>
           </div>
         </div>
       </div>
@@ -106,7 +108,7 @@
           <li><span>&#127908;</span> Worship &amp; theme songs</li>
           <li><span>&#128218;</span> Bible adventures</li>
           <li><span>&#127912;</span> Crafts &amp; activities</li>
-          <li><span>&#127865;</span> Snacks every night</li>
+          <li><span>&#127869;&#65039;</span> Dinner for the whole family</li>
           <li><span>&#9917;</span> Games &amp; recreation</li>
           <li><span>&#10024;</span> Friendships that last</li>
         </ul>
